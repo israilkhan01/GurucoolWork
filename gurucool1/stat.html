@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stat.css">
+    <title>Statistics</title>
+</head>
+
+<body>
+
+
+    <nav>
+        GURUCOOL
+    </nav>
+
+    <main>
+        <div class="perButtonsContainer">
+        <div class="testfb">
+            <span >
+                <i class="fas fa-paste"></i>
+            </span>
+            <span>TEST FEEDBACK</span>
+        </div>
+        <!-- <div class="perButtonsContainer"> -->
+        <div class="perButtons">
+            <div class="active">
+                <button class="ovbuts active" onclick="clickovbuts(this)"> 
+                    Overall Performance
+                </button>
+            </div>
+            <div>
+                <button class="ovbuts" onclick="clickovbuts(this)">
+                    Question-wise Analysis
+                </button>
+            </div>
+            <div>
+                <button class="ovbuts" onclick="clickovbuts(this)">
+                    Embibe Guide
+                </button>
+            </div>
+            <div>
+                <button class="ovbuts" onclick="clickovbuts(this)">
+                    Test-on-Test Analysis
+                </button>
+            </div>
+        </div>
+        </div>
+        <div class="statcontainer">
+            <div class="leftC">
+                <div class="scoreCard">
+
+                    <div class="marks_per">
+                        <div class="score xm">
+                            <p>
+                                SCORE
+                            </p>
+                            <div class="vals">
+                                <span class="mks">
+                                    4
+                                </span>
+                                <span>/</span>
+                                <span class="givenMarks">120</span>
+                            </div>
+                        </div>
+                        <div class="percentage xm">
+                            <p>PERCENTAGE</p>
+                            <div class="vals">
+                                <span class="mks">3.33</span>
+                                <span class="mks">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="division"></div>
+
+                    <div class="scale">
+
+
+                        <div class="scalepath">
+                            <!-- <div class="cursor" id="cursor">
+                                <span class="us"><i class="fas fa-user-graduate"></i></span>
+                               <img src="./icon/location.svg"  height="35" width="35" alt="">
+                            </div> -->
+
+                            <div class="sp">
+                                <span class="min" id="minSc">0</span>
+                                <div class="path">
+                                    <div class="cursor" id="cursor">
+                                        <span class="us"><i class="fas fa-user-graduate"></i></span>
+                                       <img src="./icon/location.svg"  height="35" width="35" alt="">
+                                    </div>
+                                    <div class="pathmove" id="pathmove">
+
+                                    </div>
+                                    <div class="start mark" id="start"> </div>
+                                    <div class="topSc mark" id="topSc">
+
+                                    </div>
+                                    <div class="CutSc mark" id="CutSc">
+
+                                    </div>
+                                    <div class="AvgSc mark" id="AvgSc">
+
+                                    </div>
+
+                                </div>
+                                <span class="max" id="maxSc">
+                                    300
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="act_score">
+                            <div class="sc">
+                                <div class="sc_val org">
+                                    <span class="dot"> <i class="fas fa-circle"></i></span>
+                                    <span>200</span>
+                                </div>
+                                <div class="sc_typ">
+                                   Cut-off Score
+                                </div>
+                            </div>
+                            <div class="sc">
+                                <div class="sc_val bl">
+                                    <span class="dot"> <i class="fas fa-circle"></i></span>
+                                    <span>50</span>
+                                </div>
+                                <div class="sc_typ">
+                                   Avg Score
+                                </div>
+                            </div>
+                            <div class="sc">
+                                <div class="sc_val voi">
+                                    <span class="dot"> <i class="fas fa-circle"></i></span>
+                                    <span>280</span>
+                                </div>
+                                <div class="sc_typ">
+                                   Top Score
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="attempAnaly">
+               
+                    <div class="hd">
+                        Attempt Analysis
+                    </div>
+                    <div class="aaBox">
+                        <div class="ahd">
+                            <div>
+                                <span>Total Questions : 30 |</span>
+                                <!-- <div class="val">
+                                    30
+                                </div> -->
+                                <!-- <span>|</span> -->
+
+                            </div>
+
+                            <div>
+                                <span>Total Questions : 30 |</span>
+                                <!-- <div class="val">
+                                    30
+                                </div> -->
+                                <!-- <span>|</span> -->
+                            </div>
+                            <div>
+                                <span>Total Questions : 30 </span>
+                                <!-- <div class="val">
+                                    30
+                                </div> -->
+                                
+                            </div>
+                        </div>
+
+                        <div class="smBox">
+                            <div class="AnBox gr">
+                                <div class="cirstats">
+                                    <div class="progresscircle">
+
+                                        <svg class="svgcircle" >
+                                            <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(39 211 102 / 6%)"  stroke-width="0px" fill="none" />
+                                            <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(39 211 102 / 20%)" stroke-width="4" fill="rgb(39 211 102 / 6%)" />
+                                            <circle id="circle1"   class="cir" cx="60" cy="60"  r="51" stroke="rgb(39 211 102 / 100%)" stroke-width="4" fill="none" />
+    
+                                           
+                                          </svg>
+                                        <div class="innercont">
+                                           <div class="innercol">
+                                               <div class="percentage">
+                                                   <div id="currentPercent1" class="val grc">50</div>
+                                                   <div class="valtyp">CORRECT</div>
+                                               </div>
+                                              
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jam">
+                                    <div class="df">
+                                        <span class="icon yel">
+                                            <i class="fas fa-check-circle"></i>
+                                        </span>
+                                        <span class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                                Too Fast Correct
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon bl">
+                                            <i class="fas fa-gem"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                                Perfect
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon org">
+                                            <i class="fas fa-clock"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                                Overtime correct
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="AnBox ">
+                               <div class="cirstats">
+
+
+                                <div class="progresscircle">
+
+                                    <svg class="svgcircle" >
+                                        <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(237 96 96 / 8%)"  stroke-width="0px" fill="none" />
+                                        <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(237 96 96 / 20%)" stroke-width="4" fill="rgb(237 96 96 / 8%)" />
+                                        <circle id="circle"  class="cir" cx="60" cy="60"  r="51" stroke="rgb(237 96 96 / 100%)" stroke-width="5" fill="none" />
+
+                                       
+                                      </svg>
+                                    <div class="innercont">
+                                       <div class="innercol">
+                                           <div class="percentage">
+                                               <div id="currentPercent" class="val">50</div>
+                                               <div class="valtyp">INCORRECT</div>
+                                           </div>
+                                          
+                                       </div>
+                                    </div>
+                                </div>
+                   
+                                </div>
+                                <div class="jam">
+                                    <div class="df">
+                                        <span class="icon pk">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                                Wasted
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon pk">
+                                            <i class="fas fa-times-circle"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                               Incorrect
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon pk">
+                                            <i class="fas fa-clock"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                               Overtime Incorrect
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="AnBox lg">
+                               <div class="cirstats">
+                                <div class="progresscircle">
+
+                                    <svg class="svgcircle" >
+                                        <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(141 141 141/ 8%)"  stroke-width="0px" fill="none" />
+                                        <circle  class="cir" cx="60" cy="60" r="51" stroke="rgb(141 141 141/ 20%)" stroke-width="4" fill="rgb(141 141 141 / 8%)" />
+                                        <circle id="circle2"  class="cir" cx="60" cy="60"  r="51" stroke="rgb(141 141 141/100%)" stroke-width="5" fill="none" />
+
+                                       
+                                      </svg>
+                                    <div class="innercont">
+                                       <div class="innercol">
+                                           <div class="percentage">
+                                               <div id="currentPercent2" class="val lgc">0</div>
+                                               <div class="valtyp">UNATTEMPTS</div>
+                                           </div>
+                                          
+                                       </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="jam">
+                                    <div class="df">
+                                        <span class="icon pk">
+                                            <i class="fas fa-circle"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                               Not Answered
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon voi">
+                                            <i class="fas fa-circle"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">1</div>
+                                            <span class="valtype">
+                                                Marked for Review
+                                            </span>
+                                        </span>
+
+                                    </div>
+                                    <div class="df">
+                                        <span class="icon">
+                                            <i class="far fa-circle"></i>
+                                        </span>
+                                        <span  class="inlines">
+                                            <div class="val">28</div>
+                                            <span class="valtype">
+                                               Not Visited
+                                            </span>
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <div class="rightc">
+                <div class="smrc">
+                    What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                </div>
+                <div class="smrc">
+                    What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./stat.js"></script>
+</body>
+
+</html>

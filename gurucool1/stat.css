@@ -1,0 +1,636 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --color1:#f9ca32;
+    --color2:#f9ca322f;
+    --fontLato: 'Poppins', sans-serif;
+    --fontRed: 'Redressed', cursive;
+    --fontYellow: 'Yellowtail', cursive;
+  }
+
+body{
+    font-family: var(--fontLato);
+}
+nav{
+    font-weight: 700;
+    font-size: 25px;
+    padding: 10px;
+    background-color: black;
+    color: var(--color1);
+    border-bottom: 1px solid grey;
+}
+main{
+    width: 100%;
+    max-width: 1404px;
+    margin: 10px auto;
+    /* border: 0.1px solid grey; */
+    padding: 10px 0px;
+}
+.testfb{
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 22px;
+    /* border-bottom: 0.1px solid ; */
+}
+.perButtonsContainer{
+    padding: 0px 5px;
+    /* border-bottom: 0.1px solid rgb(0 0 0 / 18%); */
+    box-shadow: 0px 3px 5px -2px rgba(74,74,74,0.75);
+-webkit-box-shadow: 0px 3px 5px -2px rgba(74,74,74,0.75);
+-moz-box-shadow: 0px 3px 5px -2px rgba(74,74,74,0.75);
+}
+.perButtons{
+    padding: 15px 0px 5px;
+    display: flex;
+    justify-content: flex-start;
+   
+    /* max-width: 980px; */
+    overflow-x: auto;
+    /* margin-bottom: -10px; */
+}
+.perButtons::-webkit-scrollbar{
+    width: 0px;
+    padding: 0px;
+    height: 0px;
+    margin: 0px;
+}
+.perButtons div{
+    margin-right: 15px;
+
+}
+.perButtons div button{
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 16px;
+    width: max-content;
+    /* color: ; */
+   
+    font-weight: 600;
+    background-color: transparent;
+    transition: 0.3s all;
+}
+/* .perButtons div button:before{
+
+} */
+.perButtons div button::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    background-color: transparent;
+    transition: 0.3s all;
+}
+.perButtons .ovbuts.active{
+    border-radius: 3px;
+    /* color: var(--color1); */
+    background-color: var(--color2);
+}
+
+.perButtons div .ovbuts.active::after{
+    width: 100%;
+    background-color: var(--color1);
+
+}
+.statcontainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 3px 0px;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+.leftC{
+    max-width: 1013.75px;
+    width: 100%;
+    min-width: 70%;
+    padding: 10px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+.rightc{
+    position: relative;
+    max-width: 29%;
+    /* min-width: 250px; */
+    /* width: 100%; */
+    /* min-width: 0px; */
+    /* height: 50px; */
+
+    padding: 10px 10px;
+
+    /* background-color: rebeccapurple; */
+}
+.smrc{
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    border: 0.1px solid rgb(0 0 0 / 18%);
+}
+
+
+
+.leftC .scoreCard{
+    position: relative;
+    display: flex;
+    border-radius: 7px;
+    height: 220px;
+    /* margin-top: 10px; */
+    border: 0.1px solid rgb(0 0 0 / 18%);
+    align-items: center;
+    justify-content: space-between;
+}
+.division{
+    position: relative;
+    height: 50px;
+    width: 0.5px;
+    background: rgb(138, 138, 138);
+}
+.marks_per{
+    width: 50%;
+    padding:20px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgb(255, 221, 238); */
+    /* border-right: 0.01px solid rgb(117, 117, 117); */
+}
+.marks_per .xm p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.marks_per .vals span{
+    font-size: 12px;
+}
+.marks_per .vals .mks{
+    color: var(--color1);
+    font-size: 30px;
+    font-weight: 600;
+}
+.scale{
+    width: 50%;
+}
+.scalepath{
+    padding: 10px;
+
+}
+.cursor{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    top: -180%;
+    transition: 0.5s all;
+    /* background-color: red */
+}
+.cursor .us{
+    position: absolute;
+    font-size: 12px;
+    color: rgb(255, 198, 53);
+    
+}
+.scalepath .sp{
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.scalepath .sp .path{
+    width: calc(100% - 100px);
+    position: relative;
+    /* padding: 10px; */
+    background-color: rgb(228, 228, 228);
+    height: 1.4rem;
+
+}
+.sp .min , .sp .max{
+    padding:0px 5px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+#pathmove{
+    background-color: var(--color1);
+    width: 0%;
+    height: 100%;
+    /* z-index: -1; */
+    position: absolute;
+    left: 0px;
+    transition: 0.3s all;
+}
+
+.mark{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    border-right:4px solid rgb(255, 166, 0);
+    /* background-color: red; */
+    left: 0%;
+}
+.start::before{
+    content: "0";
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    font-size: 14px;
+
+}
+.start{
+
+    left: 0%;
+    border-width: 1px;
+    border-color: rgb(253, 51, 0);
+}
+.topSc{
+    /* left: 5%; */
+    border-color: slateblue;
+}
+.AvgSc{
+    /* left: 35%; */
+    border-color: skyblue;
+}
+.act_score{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.act_score .sc{
+    padding: 5px;
+    font-size: 13px;
+}
+.act_score .sc .sc_val{
+    font-size:14.56px;
+    font-weight: 600;
+}
+.act_score .sc .sc_typ{
+    font-size: 12.32px;
+}
+.org{
+    color: orange;
+}
+.bl{
+    color: skyblue;
+}
+.voi{
+    color: slateblue;
+}
+.yel{
+    color: rgb(211, 211, 71);
+}
+.pk{
+    color: salmon;
+}
+.attempAnaly{
+    padding: 10px 0px;
+
+}
+.attempAnaly .hd{
+    font-weight: 600;
+    padding: 5px 0px 8px 5px;
+}
+.aaBox{
+    border-radius: 5px;
+    padding: 5px 10px ;
+
+    border:0.1px solid rgb(0 0 0 / 18%);
+}
+.smBox{
+    position: relative;
+
+}
+.AnBox{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    padding: 15px 0px;
+    /* background-color: rgb(237 96 96 / 8%); */
+    background-color: var(--color2);
+    margin-bottom: 10px;
+
+}
+
+.gr{
+    
+    background-color: rgb(39 211 102 / 6%);
+}
+.lg{
+    background-color: rgb(141, 141, 141 , 8%);
+}
+.aaBox .ahd{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+}
+.aaBox .ahd div{
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    font-weight: 600;
+    
+}
+.smBox .AnBox{
+    display: flex;
+    border-radius: 5px;
+    height: 160px;
+    /* height: 100%; */
+    align-items: center;
+}
+
+.smBox .AnBox .jam{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.jam .df{
+    margin: 0px 5px;
+    width: 160px;
+    display: flex;
+    /* float: lef; */
+    height: 95px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+}
+.df .icon{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.jam .val{
+    font-weight: 600;
+    /* font-size: 35px; */
+    /* height: 4rem; */
+    font-size: 35px;
+}
+.jam .valtype{
+    width: 100px;
+    /* height: 4rem; */
+    font-size: 14px;
+}
+
+.cirstats{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    /* margin: 20px; */
+    justify-content: center;
+}
+.progresscircle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* margin: 20px; */
+    justify-content: center;
+}
+.cir{
+    transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+#circle{
+    stroke-opacity: 0.9;
+}
+.innercont{
+    position: absolute;
+    text-align: center;
+    /* top: 10px; */
+    /* width: fit-content; */
+    /* height: fit-content; */
+    /* display: flex; */
+    color: rgb(237 96 96 / 100%);
+}
+.innercont .innercol span{
+    /* font-size: 14px; */
+    font-weight: 600;
+}
+.innercont .innercol .innercol-icon{
+    font-size: 15px;
+}
+.innercont .percentage .val{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-size: 24px;
+    font-weight: 600;
+}
+.innercont .percentage .valtyp{
+    font-size: 12px;
+    margin-top: -10px;
+    color: rgb(56, 53, 53);
+}
+.grc{
+    color: rgb(39 211 102 / 100%) !important;
+}
+.lgc{
+    color: rgb(141 141 141/100%);
+}
+.svgcircle{
+    width: 120px ;
+    height: 120px ;
+} 
+/* @media screen and (max-width:1013px){
+    .rightc{
+        display: none;
+    }
+} */
+
+
+@media screen and (max-width:1013px){
+    .rightc{
+        display: none;
+    }
+    .division{
+        display: none;
+    }
+    .leftC{
+        /* padding-top: 14px; */
+    }
+    .marks_per{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .perButtons div button{
+        font-size: 15px;
+    }
+    .leftC .scoreCard{
+        height: auto;
+        flex-direction: column;
+    }
+    .scale{
+        width: 100%;
+        padding: 10px 0px;
+    }
+    .smBox .AnBox .jam{
+        flex-direction: column;
+    }
+    .jam .df{
+        height: fit-content;
+        align-items: center;
+        width: auto;
+    }
+    .jam .df .inlines{
+        display: flex;
+        flex-direction: row;
+    }
+    .df .icon{
+        width: 35px;
+        text-align: right;
+        font-size: 27px;
+    }
+    .jam .val{
+        margin-right:10px ;
+        font-size: 22px;
+        text-align: right;
+        width: 50px;
+    }
+    .jam .valtype{
+       display: flex;
+       /* justify-content: center; */
+       align-items: center;
+        width: 200px;
+    }
+    .aaBox .ahd{
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:650px){
+    .aaBox .ahd div{
+        font-size: 13px;
+
+    }
+    .perButtons div button{
+        font-size: 14px;
+    }
+    .df .icon{
+        font-size: 22px;
+
+    }
+    .df .icon{
+        width: 30px;
+        font-size: 20px;
+    }
+    .jam .val{
+        margin-right:10px ;
+        font-size: 20px;
+        text-align: right;
+        width: 30px;
+    }
+    .jam .valtype{
+       display: flex;
+       text-align: left;
+       /* justify-content: center; */
+       /* align-items: left; */
+       /* align-items: flex-start; */
+       font-size: 13px;
+        width: 180px;
+    }
+    
+    .svgcircle{
+        width: 90px ;
+        height: 90px ;
+    } 
+    /* .cir{
+        glyph-orientation-horizontal:45px;
+        glyph-orientation-vertical: 45px;
+    
+    }  */
+
+    .innercont .percentage .val{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .innercont .percentage .valtyp{
+        font-size: 11px;
+        margin-top: -25px;
+        /* font-weight: 600; */
+    }
+    .scalepath{
+        padding: 10px 0px;
+    }
+    .perButtons div{
+        margin-right: 10px;
+    }
+    .testfb{
+        font-size: 20px;
+    }
+}
+
+
+
+@media screen and (max-width:500px){
+    .testfb{
+        font-size: 17px;
+    }
+    .perButtons div{
+        margin-right: 4px;
+    }
+    .perButtons div button{
+        font-size: 13px;
+    }
+    .marks_per .xm p{
+        font-size: 12px;
+    }
+    .marks_per .vals .mks{
+        font-size: 25px;
+    }
+    .scalepath .sp .path{
+        width: calc(100% - 60px);
+        /* height: 15px; */
+    }
+    .sp .min, .sp .max{
+        font-size: 13px;
+    }
+    .act_score .sc .sc_val{
+        font-size: 13px;
+    }
+    .act_score .sc .sc_typ{
+        font-size: 11px;
+    }
+    .aaBox .ahd div{
+        font-size: 12px;
+    }
+    .jam .valtype{
+        font-size: 11px;
+        /* max-width: 150px; */
+        word-wrap:break-word;
+        /* line-break: auto; */
+        width: 100px;
+    }
+    .df .icon{
+        font-size: 17px;
+        width: 25px;
+        margin-right: 5px;
+    }
+    .jam .val{
+        width: 25px;
+        margin-right: 7px;
+        font-size: 17px;
+    }
+    /* .svgcircle{
+        width: 80px ;
+        height: 80px ;
+    }  */
+    .cirstats{
+        width: 40%;
+    }
+}
+
+/* {
+    .cirstats{
+        width: 40%;
+    }
+} */
