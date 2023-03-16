@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="./popup3.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+	<title>Document</title>
+	
+</head>
+<body>
+	
+	<div class="popupbox-3">
+		
+		<div class="popupbox-slider-box">
+			<div class="menu-box">
+				<h1>Recent</h1>
+				<div class="your-lib">
+					<i class="fas fa-folder"></i>
+					<p>Your Library</p>
+				</div>
+			</div>
+			<div class="slider-box">
+				<img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+				<img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+				<img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+				<img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+				<img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+				<img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+			</div>
+		</div>
+		<div class="popupbox-slider-box">
+			<div class="menu-box">
+				<h1>Enrolled</h1>
+				<div class="your-lib">
+					<i class="fas fa-plus"></i>
+					<button>Create a design</button>
+				</div>
+			</div>
+			<div class="slider-box">
+				<img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+				<img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+				<img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+				<img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+				<img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+				<img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+				<img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript">
+		
+		$('.slider-box').slick({
+			centerMode: true,
+			centerPadding: '60px',
+			slidesToShow: 3,
+			arrows:true,
+			dots:false,
+			prevArrow:`
+				<div style="cursor:pointer;position:absolute;left:0;top:50%;transform:translateY(-50%);width:50px;height:50px;z-index:5; display:flex;justify-content:center;align-items:center;background:black;border-radius:100%;">
+					<i class="fas fa-less-than" style="font-size:15px;color:#F9CB48;"></i>
+				</div>	
+				`,
+			nextArrow:`
+				<div style="cursor:pointer;position:absolute;right:0;top:50%;transform:translateY(-50%);width:50px;height:50px;z-index:5; display:flex;justify-content:center;align-items:center;background:black;border-radius:100%;">
+					<i class="fas fa-greater-than" style="font-size:15px;color:#F9CB48;"></i>
+				</div>
+				`,
+			responsive: [
+				{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+				},
+				{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+				}
+			]
+		});
+
+		console.log('hello')
+	</script>
+</body>
+</html>

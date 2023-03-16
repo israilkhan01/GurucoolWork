@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./calender.css">
+    <link rel="stylesheet" href="./popup2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="./popup3.css">
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="./editcard.css">
+    <link rel="stylesheet" href="./createcard.css">
+    <link rel="stylesheet" href="./popup1.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  
+
+    <title>Calender|Gurucool</title>
+</head>
+<body onload="renderDate()"> 
+    
+    <div id="editViewWrapper" onclick="editViewButtos(this)">
+
+    </div>
+    <div class="" id="editWrapper" onclick="editViewButtonsShow(this)">
+
+    </div>
+    <div class="EditcardContainer" id="EditcardContainer">
+        <div class="imgContainer">
+          <img
+            src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="EditDetailContainer">
+          <div class="EditinnnerContainer">
+            <div class="header">
+              <div class="imgprofile">
+                <img
+                  src="./img/green-chameleon-s9CC2SKySJM-unsplash.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="creater">
+                <div class="createdBy">Created by <span>Israil khan</span></div>
+                <span class="timing"> Friday,13 April,04.04 </span>
+              </div>
+            </div>
+            <!-- <div class="uploadedDate">
+             <div>
+              <span> <i class="fas fa-calendar-week"></i> </span> Friday,13
+              April,04.04 <span>
+             </div> <i class="fas fa-ellipsis-h"></i> </span>
+            </div> -->
+            <div class="select-one Create-selectbox">
+                <div class="buttons">
+                <button class="active" onclick="DailyButtons(this)">
+                    Daily
+                </button>
+                <button onclick="DailyButtons(this)">
+                    Weekly
+                </button>
+                <button onclick="DailyButtons(this)">
+                    Month
+                </button>
+                </div>
+              </div>
+              <div class="select-two Create-selectbox" >
+                <div class="EnterTime">
+                    <div class="spanTime">
+                      <div>
+                          Dedicated Time
+                      </div>
+                        <div>
+                            (in Hour)
+                        </div>
+                    </div>
+                    <div class="inp">
+                        <input type="text"  placeholder="0.5">
+                    </div>
+                </div>
+              </div>
+              <div class="TextBox">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Hi There...."></textarea>
+                <span>
+                    25 / 5000
+                </span>
+              </div>
+            <div class="Postbuttons">
+                <button class="SchedulePost purple"> Edit Design </button>
+                <button class="SchedulePost grey"> Make a copy </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="crossCloseCard" onclick="editViewButtonsShow(this)"> <i class="fas fa-times-circle"></i> </div>
+      </div>
+    
+    <!-- editView -->
+    <div id="editViewButtons">
+        <button class="Editbtn" onclick="editViewButtonsShow(this)">
+            Edit
+        </button>
+        <button class="View" onclick="editViewButtosShow(this)">
+            View
+        </button>
+    </div>
+
+    <div class="" id="createGoalWrapper" 
+    onclick="createGoalContainerView(this)">
+    </div>
+
+    <div class="Create-cardContainer">
+        <div class="imgContainer">
+          <img
+            src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="Create-DetailContainer">
+          <div class="innnerContainer">
+            <div class="header SpaceBet">
+              <div class="header">
+                  <div class="imgprofile">
+                      <img
+                        src="./img/green-chameleon-s9CC2SKySJM-unsplash.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="creater">
+                      <div class="createdBy">Created by <span>Israil khan</span></div>
+                      <span class="timing"> Friday,13 April,04.04 </span>
+                    </div>
+                    
+              </div>
+              <div class="userbut" >
+                  <i class="fas fa-user-plus"></i>
+              </div>
+            </div>
+            <div class="uploadedDate">
+             <div>
+              <span> <i class="fas fa-calendar-week"></i> </span> Friday,13
+              April,04.04 <span>
+             </div> <i class="fas fa-ellipsis-h"></i> </span>
+            </div>
+            <div class="select-one Create-selectbox">
+              <div class="buttons">
+              <button class="active" onclick="DailyButtons(this)">
+                  Daily
+              </button>
+              <button onclick="DailyButtons(this)">
+                  Weekly
+              </button>
+              <button onclick="DailyButtons(this)">
+                  Month
+              </button>
+              </div>
+            </div>
+            <div class="select-two Create-selectbox" >
+              <div class="EnterTime">
+                  <div class="spanTime">
+                    <div>
+                        Dedicated Time
+                    </div>
+                      <div>
+                          (in Hour)
+                      </div>
+                  </div>
+                  <div class="inp">
+                      <input type="text">
+                  </div>
+              </div>
+            </div>
+            <div class="TextBox">
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+              <span>
+                  25 / 5000
+              </span>
+            </div>
+            <div class="Postbuttons">
+                <button class="SchedulePost purple"> Schedule Post </button>
+                <button class="SchedulePost grey"> Save Draft  </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="crossCloseCard" onclick="createGoalContainerView(this)"> <i class="fas fa-times-circle"></i> </div>
+      </div>
+
+
+    <div id="toggleWrapper" class="" onclick="ToggleSideBar(this)">
+
+    </div>
+    <div id="createWrapper" class="" onclick="CreateFunctionality(this)" >
+
+    </div>
+    <div id="taskWrap" class="" onclick="TaskDetail(this)">
+     
+    </div>
+    <nav>
+        GURUCOOL
+    </nav>
+
+    <div class="Guru_profile_container">
+        <div class="dash_sticky_profile_container">
+           
+
+            <div class="create">
+               <button class="createbutton" onclick="CreateFunctionality(this)">
+               <i class="fas fa-plus"></i> <span class="">Create</span>
+               </button>
+               <button class="TogglBar" onclick="ToggleSideBar(this)">
+                <i class="fas fa-bars"></i>
+               </button>
+            </div>
+
+            <div class="buttonsList">
+                <div class="options active"  onclick="CreateForGettingAttribute(this)" createType="popupbox-3">
+                    <div class="imgCont">
+                        <i class="fas fa-bullseye"></i>
+                        <!-- <img src="" alt="" srcset=""> -->
+                    </div>
+                    <div class="name">
+                        Goal
+                    </div>
+                </div>
+                <div class="options"  onclick="CreateForGettingAttribute(this)" createType="popup-box-2">
+                    <div class="imgCont">
+                        <i class="fas fa-calendar-check"></i>
+                        <!-- <img src="" alt="" srcset=""> -->
+                    </div>
+                    <div class="name" >
+                        Task
+                    </div>
+                </div>
+                <div class="options"  onclick="CreateForGettingAttribute(this)" createType="popup-box-2">
+                    <div class="imgCont">
+                        <i class="fas fa-calendar-alt"></i>
+                        <!-- <img src="" alt="" srcset=""> -->
+                    </div>
+                    <div class="name">
+                        Event
+                    </div>
+                </div>
+                <div class="options"  onclick="CreateForGettingAttribute(this)" createType="popup-box-2">
+                    <div class="imgCont">
+                        <i class="fas fa-bell"></i>
+                        <!-- <img src="" alt="" srcset=""> -->
+                    </div>
+                    <div class="name">
+                        Reminder
+                    </div>
+                </div>
+                <div class="options"  onclick="CreateForGettingAttribute(this)" createType="popup-box-2">
+                    <div class="imgCont">
+                        <i class="fas fa-list-alt"></i>
+                        <!-- <img src="" alt="" srcset=""> -->
+                    </div>
+                    <div class="name">
+                        Content Planner
+                    </div>
+                </div>
+
+            </div>
+            
+           
+            </div>
+
+        </div>
+    </div>
+    <div class="mentor_dash">
+
+        <div class="calendar" >
+            <div class="month">
+    
+                <div class="md">
+                    <div id="month"></div>
+                    <p id="date_str"></p>
+                </div>
+                <div class="mdpn">
+                    <div class="prev" onclick="moveDate('prev')">
+                        <span><i class="fas fa-angle-left"></i></span>
+                    </div>
+                    <div class="currentDay">
+                      Today
+                    </div>
+                    <div class="next" onclick="moveDate('next')">
+                        <span><i class="fas fa-angle-right"></i></span>
+                    </div>
+                </div>
+            </div>
+           <div class="monDayCont">
+            <div class="weekdays">
+                <div class="red">Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="weekdays Letter">
+                <div class="red">S</div>
+                <div>M</div>
+                <div>T</div>
+                <div>W</div>
+                <div>T</div>
+                <div>F</div>
+                <div>S</div>
+            </div>
+            
+            <div class="days">
+    
+            </div>
+           </div>
+        </div>
+
+    </div>
+
+
+    <!-- taskhover -->
+     
+    <div class="popup-box">
+		<div class="popup-icon-container">
+			<i class="fas fa-pencil-alt"></i>
+			<i class="fas fa-trash"></i>
+			<i class="fas fa-envelope"></i>
+			<i class="fas fa-ellipsis-v"></i>
+			<i onclick="TaskDetail(this)" class="fas fa-times"></i>
+		</div>
+		<div class="popup-box-content">
+			<div class="content">
+				<i class="fas fa-square"></i>
+				<div class="description">
+					<h1>Hello Guru!</h1>
+					<p>Tudesday, March 30 . 12:15 - 1:15pm</p>
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-bars"></i>
+				<div class="description">
+					
+					<p>Hello I wanna organise. blah blah blah</p>
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-bell"></i>
+				<div class="description">
+					<p>10 minutes before</p>
+					<p>30 minutes before</p>
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-calendar"></i>
+				<div class="description">
+					<p>Ariz Khan</p>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- task -->
+    <div class="popup-box-2">
+		<div class="top-task-bar">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times" style="cursor:pointer" onclick="CreateFunctionality(this)"></i>
+		</div>
+		<div class="popup-title-and-buttons">
+			
+			<input type="text" placeholder="Add title">
+			<div class="popup-btns-container">
+				<div class="btns popup-btn-selected">
+					<p>Events</p>
+				</div>
+				<div class="btns">
+					<p>Task</p>
+				</div>
+				<div class="btns">
+					<p>Reminder</p>
+				</div>
+			</div>
+		</div>
+		<div class="popup-box-content">
+			<div class="content">
+				<i class="fas far fa-clock"></i>
+				<div class="description">
+					
+					<input type="text" placeholder="Add title">
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-user-friends"></i>
+				<div class="description">
+					
+					<!-- <p>Add guests</p> -->
+					<input type="text" placeholder="Add guests">
+
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-video"></i>
+				<div class="description">
+					<!-- <a class="link-bg">Any Link?</a> -->
+					<input class="link-bg" type="text" placeholder="Any Link?">
+					
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-map-marker-alt"></i>
+				<div class="description">
+		
+					<input type="text" placeholder="Add Location">
+					
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-bars"></i>
+				<div class="description">
+					
+					<input type="text" placeholder="Add descriptions or attachment">
+					
+				</div>
+			</div>
+			<div class="content">
+				<i class="fas fa-calendar"></i>
+				<div class="description">
+					<!-- <input type="text" placeholder="Add title"> -->
+					<p>Ariz Khan</p>
+					<span>Busy . Default Visibility . Notify 30 minutes before</span><br/>
+				</div>
+			</div>
+		</div>
+		<div class="popup-box-btn">
+			<button>Save</button>
+		</div>
+	</div>
+  
+   <!-- goal -->
+
+   <div class="popupbox-3">
+		<div class="cross">
+            <i class="fas fa-times" style="cursor:pointer" onclick="CreateFunctionality(this)"></i>
+        </div>
+    <div class="popupbox-slider-box">
+        <div class="menu-box">
+            <h1>Recent</h1>
+            <div class="your-lib">
+                <i class="fas fa-folder"></i>
+                <p>Your Library</p>
+            </div>
+        </div>
+        <div class="slider-box">
+            <img onclick="createGoalContainerView(this)" src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+            <img onclick="createGoalContainerView(this)" src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+            <img onclick="createGoalContainerView(this)" src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+            <img onclick="createGoalContainerView(this)" src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+            <img onclick="createGoalContainerView(this)" src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+            <img onclick="createGoalContainerView(this)" src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+        </div>
+    </div>
+    <div class="popupbox-slider-box">
+        <div class="menu-box">
+            <h1>Enrolled</h1>
+            <div class="your-lib">
+                <i class="fas fa-plus"></i>
+                <button>Create a design</button>
+            </div>
+        </div>
+        <div class="slider-box">
+            <img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+            <img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+            <img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+            <img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+            <img src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg" alt="">
+            <img src="./img/leilani-angel-K84vnnzxmTQ-unsplash.jpg" alt="">
+            <img src="./img/warren-wong-uuVguyksViA-unsplash.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
+
+<script type="text/javascript">
+    
+    $('.slider-box').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        arrows:true,
+        dots:false,
+        prevArrow:`
+            <div style="cursor:pointer;position:absolute;left:0;top:50%;transform:translateY(-50%);width:50px;height:50px;z-index:5; display:flex;justify-content:center;align-items:center;background:black;border-radius:100%;">
+                <i class="fas fa-less-than" style="font-size:15px;color:#F9CB48;"></i>
+            </div>	
+            `,
+        nextArrow:`
+            <div style="cursor:pointer;position:absolute;right:0;top:50%;transform:translateY(-50%);width:50px;height:50px;z-index:5; display:flex;justify-content:center;align-items:center;background:black;border-radius:100%;">
+                <i class="fas fa-greater-than" style="font-size:15px;color:#F9CB48;"></i>
+            </div>
+            `,
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+            }
+        ]
+    });
+
+    console.log('hello')
+</script>
+<script src="./calender.js"></script>
+<script src="./ createcard.js"></script>
+
+</body>
+</html>

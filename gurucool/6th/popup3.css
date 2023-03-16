@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+	background: #cecece;
+}
+.popupbox-3 {
+	
+	background:white;
+	border-radius: 5px;
+	width: 98%;
+	margin: auto;
+	margin-top: 20px;
+	overflow: hidden;
+
+}
+.popupbox-slider-box {
+
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 20px;
+}
+.popupbox-slider-box .menu-box {
+	/* background: red; */
+	background: #F9CB48;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/* margin: auto; */
+	padding: 10px 20px;
+	align-items: center;
+}
+.popupbox-slider-box .menu-box h1 {
+	font-size: 28px;
+	font-weight: 400;
+}
+.popupbox-slider-box .menu-box .your-lib {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popupbox-slider-box .menu-box .your-lib button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s ease-in;
+	font-weight: 700;
+	height: 100%;
+	border: 1px solid #f0bc3b;
+	padding: 15px;
+
+}
+.popupbox-slider-box .menu-box .your-lib button:focus {
+	/* transform: scale(0.98); */
+	outline:none;
+}
+.popupbox-slider-box .menu-box .your-lib .fas {
+	
+	margin: 0px 10px;
+	
+}
+.popupbox-slider-box .slider-box {
+	padding: 20px;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popupbox-slider-box .slider-box img {
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+	margin: 0px 10px;
+}
+
+@media (max-width:450px) {
+	.popupbox-slider-box .menu-box h1 {
+		font-size: 22px;
+	}
+}

@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --color1:#f9ca32;
+    --color2:#f9ca322f;
+    --fontLato: 'Poppins', sans-serif;
+    --fontRed: 'Redressed', cursive;
+    --fontYellow: 'Yellowtail', cursive;
+  }
+
+body{
+    font-family: var(--fontLato);
+}
+
+.cardContainer{
+    position: absolute;
+    width: calc(100% - 100px);
+    max-width: 1245px;
+    left: 50%;
+    /* top: 50%; */
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:25px 20px;
+    margin: 50px 0px;
+    box-shadow: 1px -1px 5px 0px rgba(69,69,69,0.75);
+-webkit-box-shadow: 1px -1px 5px 0px rgba(69,69,69,0.75);
+-moz-box-shadow: 1px -1px 5px 0px rgba(69,69,69,0.75);
+    /* max-height: 600px; */
+}
+.imgContainer{
+    width: calc(100% - 350px);
+    padding:20px 10px;
+}
+.imgContainer img{
+    /* height: 100vh; */
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+.DetailContainer{
+    width: 310px;
+    padding: 10px;
+    height: 500px;
+}
+.innnerContainer{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.DetailContainer .header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 10px 0px; */
+}
+.DetailContainer .imgprofile{
+    padding-right: 10px
+}
+.DetailContainer .imgprofile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+.creater{
+    color: rgb(134, 134, 134);
+    font-size:12px;
+}
+.creater .createdBy{
+    /* font-size: 14px; */
+    word-spacing: 2px;
+}
+.creater .createdBy span{
+    font-size: 14px;
+    color: black;
+}
+.creater .timing{
+    word-spacing: 2px;
+}
+.DetailContainer .uploadedDate{
+    padding: 5px;
+    font-size: 13px;
+    word-spacing: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.selectbox{
+    padding: 7px 0px;
+}
+.selectbox select{
+    padding:10px 5px;
+    border-color: lightgray;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: transparent;
+    width: 100%;
+}
+.TextBox{
+    padding: 7px 0px;
+    position: relative;
+}
+.TextBox textarea{
+    resize: none;
+    border-color: lightgray;
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+}
+.TextBox span{
+    min-width: 55px;
+   position: absolute;
+   bottom: 20px;
+   color: grey;
+   /* font-weight: 600; */
+   /* background-color: grey; */
+   font-size: 13px;
+   right: 10px;
+}
+.Postbuttons button{
+    width: 100%;
+    background-color: transparent;
+    padding:10px 5px;
+    border: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.Postbuttons .purple{
+    background-color: rgba(2, 0, 128, 0.685);
+    margin-bottom: 7px;
+    color: white;
+}
+.Postbuttons .purple:hover{
+    background-color:rgb(70, 0, 128);
+}
+.Postbuttons .grey{
+    background-color: rgba(211, 211, 211, 0.753);
+}
+.Postbuttons .grey:hover{
+    background-color: lightgray;
+}
+.crossCloseCard{
+    position: absolute ;
+    cursor: pointer;
+    top: -15px;
+    right: -35px;
+    color: var(--color1);
+    font-size: 25px;
+}
+.crossCloseCard:hover{
+    color: black;
+}
+
+
+@media screen and (max-width:850px){
+    .DetailContainer {
+        width: 260px;
+    }
+    .imgContainer{
+        width: calc(100% - 300px);
+    }
+}
+@media screen and (max-width:780px){
+    .cardContainer{
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+    .DetailContainer {
+        width: 100%;
+
+    }
+    .imgContainer{
+        width: 100%;
+    }
+    .imgContainer img{
+        /* width: calc(100% - 300px); */
+        max-height: 300px;
+    }
+}

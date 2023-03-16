@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./createcard.css" />
+    <title>card</title>
+  </head>
+  <body>
+    <div class="Create-cardContainer">
+      <div class="imgContainer">
+        <img
+          src="./img/dawid-zawila-5nh9BBFwVQg-unsplash.jpg"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="Create-DetailContainer">
+        <div class="innnerContainer">
+          <div class="header SpaceBet">
+            <div class="header">
+                <div class="imgprofile">
+                    <img
+                      src="./img/green-chameleon-s9CC2SKySJM-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="creater">
+                    <div class="createdBy">Created by <span>Israil khan</span></div>
+                    <span class="timing"> Friday,13 April,04.04 </span>
+                  </div>
+                  
+            </div>
+            <div class="userbut" >
+                <i class="fas fa-user-plus"></i>
+            </div>
+          </div>
+          <div class="uploadedDate">
+           <div>
+            <span> <i class="fas fa-calendar-week"></i> </span> Friday,13
+            April,04.04 <span>
+           </div> <i class="fas fa-ellipsis-h"></i> </span>
+          </div>
+          <div class="select-one Create-selectbox">
+            <div class="buttons">
+            <button class="active" onclick="DailyButtons(this)">
+                Daily
+            </button>
+            <button onclick="DailyButtons(this)">
+                Weekly
+            </button>
+            <button onclick="DailyButtons(this)">
+                Month
+            </button>
+            </div>
+          </div>
+          <div class="select-two Create-selectbox" >
+            <div class="EnterTime">
+                <div class="spanTime">
+                  <div>
+                      Dedicated Time
+                  </div>
+                    <div>
+                        (in Hour)
+                    </div>
+                </div>
+                <div class="inp">
+                    <input type="text">
+                </div>
+            </div>
+          </div>
+          <div class="TextBox">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <span>
+                25 / 5000
+            </span>
+          </div>
+          <div class="Postbuttons">
+              <button class="SchedulePost purple"> Schedule Post </button>
+              <button class="SchedulePost grey"> Save Draft  </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="crossCloseCard"> <i class="fas fa-times-circle"></i> </div>
+    </div>
+
+    <script src="./ createcard.js"></script>
+  </body>
+</html>

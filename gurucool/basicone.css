@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --fontLato: 'Poppins', sans-serif;
+    --fontRed: 'Redressed', cursive;
+    --fontYellow: 'Yellowtail', cursive;
+  }
+
+body{
+    font-family: var(--fontLato);
+}
+.basiconehead{
+    background-color: #fdfcfc;
+    border-bottom: 0.1px solid #333333;
+
+}
+.basiconeButtons{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    max-width: 648px;
+    margin: 3rem auto;
+    margin-bottom: 0px;
+  
+}
+.gurutaskcont{
+    position: relative;
+    display: flex;
+    top: 0.5px;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    
+}
+.gurutaskcontActive{
+    position: relative;
+    background-color: white !important;
+    border-collapse: collapse !important;
+    color: rgb(249 201 51) ;
+    border-top: 2px solid rgb(249 201 51) !important;
+    border-right: 0.1px solid grey !important;
+    border-left: 0.1px solid grey !important;
+}
+.gurutaskcont .tz{
+    position: relative;
+    border-collapse:collapse;
+    width: 214px;
+    padding: 8px 10px;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #fdfcfc ;
+    transition: 0.3s color;
+    cursor: pointer;
+}
+.gurutaskcont .tz:hover{
+    color: rgb(249 201 51);
+}
+.gurutaskcont .tz span{
+    position: relative;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.basiccT{
+    display: none;
+    padding-top: 10px;
+}
+
+.activeWeek{
+    color: rgb(249 201 51) ;
+}
+.activeTrue{
+    text-align: center;
+    font-size: 23px;
+    height: 28px;
+    color: orangered;
+}
+.activeFalse{
+    visibility: hidden;
+    text-align: center;
+    font-size: 23px;
+    height: 28px;
+}
+.weekscontainer{
+    position: relative;
+    max-width: 648px;
+    margin: 2rem auto 0rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.weeksrun {
+    color: white;
+    transition: 0.5s all;
+}
+.weeksrun a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.weeksrun :hover{
+    color: rgb(249 201 51) !important;
+}
+.weekscontainer .Weekp{
+    position: relative;
+    padding: 8px 10px;
+    width: 157px;
+    background-color: rgb(7, 7, 7);
+    /* color: white; */
+    text-align: center;
+}
+.weekscontainer .Weekp div{
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+}
+.bottonweekbut{
+    height: 6px;
+    margin-top: 5px;
+    border: 0.1px solid lightgray;
+}
+.displaY{
+    display: block !important;
+}
+
+.displaYProgress{
+    margin-top: 10px;
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+
+.progresssCont{
+    position: relative;
+    max-width: 648px;
+    margin: 2rem auto 0rem auto;
+
+}
+.progresssCont h3{
+    margin-bottom: 20px;
+}
+.progresssCont p{
+    font-size: 14px;
+}
+.progressscale{
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+}
+.progressscale .scalehead{
+    position: relative;
+    font-size: 14px;
+}
+.progressscale .scale{
+    margin-top: 5px;
+    height: 2px;
+    width: 100%;
+    background-color: #535353;
+}
+.progressscale .scale .currentprogress{
+    height: 2px;
+    /* width: 50%; */
+    transition: 0.2s width;
+    background-color: rgb(249 201 51);
+}
+.progresscircle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
+}
+.cir{
+    transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.outerc{
+    position: relative;
+    /* height: 170px;
+    width: 170px; */
+    /* background-color: black; */
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.outerc .innerc{
+    height: 164px;
+    width: 164px;
+    background-color: rgb(249 201 51);
+    /* margin: 20px; */
+    border-radius: 50%;
+}
+#circle{
+    stroke-opacity: 0.9;
+}
+
+.innercont{
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    color: rgb(249 201 51);
+}
+.innercont .innercol span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.innercont .innercol .innercol-icon{
+    font-size: 45px;
+}
+.innercont .percentage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+#incProgress{
+    position: absolute;
+    right: 0px;
+    top: 60%;
+    padding: 10pt 16pt;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    color: rgb(249 201 51);
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+}
+
+
+
+@media screen and (max-width:660px){
+    .gurutaskcont .tz{
+        width: 160px;
+    }
+}
+
+@media screen and (max-width:660px){
+    .gurutaskcont .tz{
+        width: 150px;
+    }
+}
+@media screen and (max-width:460px){
+    .gurutaskcont .tz{
+        width: 115px;
+    }
+}
+@media screen and (max-width:360px){
+    .gurutaskcont .tz{
+        width: 110px;
+    }
+}

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Gurucool|dashboard</title>
+</head>
+
+<body>
+    <div id="gridwrapper" onclick="toolkitGrid()"></div>
+    <div id="bodywrapper" onclick="menucontrol()"  class="bodywrapper"></div>
+    <nav>
+        <div class="av">
+            <div class="selected_tools_container">
+                <div class="tool">
+                    <div class="tool_icon_img">
+                        <img width="50" height="50" src="./gurucoolicon/Untitled design (8)/1.svg" alt="">
+                    </div>
+                    <div class="tool_name">
+                        Pay
+                    </div>
+                </div>
+                <div class="tool">
+                    <div class="tool_icon_img">
+                        <img width="50" height="50" src="./gurucoolicon/Untitled design (8)/2.svg" alt="">
+
+                    </div>
+                    <div class="tool_name">
+                        learn
+                    </div>
+                </div>
+                <div class="tool">
+                    <div class="tool_icon_img">
+                        <img width="50" height="50" src="./gurucoolicon/Untitled design (8)/3.svg" alt="">
+
+                    </div>
+                    <div class="tool_name">
+                        explore
+                    </div>
+                </div>
+            </div>
+
+            <div class="toolshamburgur">
+                <div class="toolshamburgur_icon_cont">
+                    <button class="toolshamburgur_icon_cont_btn" onclick="toolkitGrid()">
+                        <i class="fas fa-th"></i>
+                    </button>
+                </div>
+
+                <div class="menubutton" onclick="menucontrol()">
+                    <!-- <div class="bar">
+                       
+                    </div> -->
+                    <div class="bar" id="bar1">
+                        
+                    </div>
+                    <div class="bar">
+                       
+                    </div>
+                    <div class="bar" id="bar2">
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="Guru_profile_container">
+        <!-- <div class="menubutton" onclick="menucontrol()">
+           
+        </div> -->
+        <div class="dash_sticky_profile_container">
+
+            <div class="proImgcont">
+                <div class="imgwrapper">
+                    <img src="./gurucoolicon/user.png" alt="" srcset="">
+                    <div class="blueTick">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="prouserName">
+                    Adil Meraj
+                </div>
+
+            </div>
+            <div class="rev_reach_count">
+                <div class="rc rev_gcl">
+                    <div class="rcup">
+                        <span>3</span> <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="rcdown">
+                        <span>5</span>
+                        <span>reviews</span>
+                    </div>
+                </div>
+                <div class="rc count_gcl">
+                    <div class="rcup">
+                        <span>
+                            100+
+                        </span>
+
+                    </div>
+                    <div class="rcdown">
+                        <span>
+                            Learners
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="sup_pay_cont">
+                <button> <i class="far fa-heart"></i> Support</button>
+                <button> <i class="fas fa-money-check"></i> Pay</button>
+            </div>
+            <div class="strlist">
+                <div class="head">Starred</div>
+                <div class="starred_gcl_list">
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/user.png" alt="">
+                            </span>
+                            <span class="label">
+                                Adil Miraj
+                            </span>
+                        </button>
+                    </div>
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/sd.png" alt="">
+                            </span>
+                            <span class="label">
+                                Stwpd
+                            </span>
+                        </button>
+                    </div>
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn starred_gcl_list_item_btn_active">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/icon.png" alt="">
+                            </span>
+                            <span class="label">
+                                Gurucool Pitch
+                            </span>
+                        </button>
+                    </div>
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/sd.png" alt="">
+                            </span>
+                            <span class="label">
+                                Random
+                            </span>
+                        </button>
+                    </div>
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/user.png" alt="">
+                            </span>
+                            <span class="label">
+                                Junaid Ansari
+                            </span>
+                        </button>
+                    </div>
+                    <div class="starred_gcl_list_item">
+                        <button class="starred_gcl_list_item_btn">
+                            <span>
+                                <img width="23" height="23" src="./gurucoolicon/user.png" alt="">
+                            </span>
+                            <span class="label">
+                                Azhar Ahmed
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mentor_dash">
+
+        <div class="mentor_dash_cont">
+            <div class="Guru_detail_container">
+
+                <div class="guru_dt_container_dr">
+                    <div class="guru_path">
+                        <div class="guru_path_active">
+                            <span class="arrow">
+                                Folder
+                            </span>
+                            <span class="arrow">></span>
+                            <span>
+                                Gurucool Pitch
+                            </span>
+                        </div>
+                        <div class="btn xpt">
+                            <div id="smj1" onclick="removesearch1()">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                            <input type="search" id="search_guru1">
+                            <button class="xpt" id="search_guru_btnxpt" onclick="searchanim1()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="guru_bts">
+                        <div class="btn xpt2">
+                            <div id="smj2" onclick="removesearch2()">
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                            <input type="search" id="search_guru2">
+                            <button class="xpt2" id="search_guru_btnxpt2" onclick="searchanim2()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="btn">
+                            <button>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="btn">
+                            <button>
+                                <i class="fas fa-folder-plus"></i>
+                            </button>
+                        </div>
+                        <div class="btn">
+                            <button class="createbtn">
+                                Create
+                            </button>
+                        </div>
+                        <div class="btn">
+                            <button title="Share">
+                                Share <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--    Classroom Test Series Study Material Q&A   -->
+                <div class="xyz_clicked_container">
+
+                    <div class="cl_head">
+                        <h1>Gurucool Pitch <span><i class="fas fa-star"></i></span></h1>
+                    </div>
+
+                    <div class="clicked_feature_list">
+                        <div class="move" id="leftmove">
+                            <button onclick="rightmove()"><i class="fas fa-angle-left"></i></button>
+                        </div>
+                        <div class="clicked_feature_list_btns">
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" style="color:black" onclick="clicked(this)">
+                                    Courses
+                                    <div class="bottomxp bottomxpactive">
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" onclick="clicked(this)">
+                                    Classroom
+
+                                    <div class="bottomxp">
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" onclick="clicked(this)">
+                                    Test
+
+                                    <div class="bottomxp">
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" onclick="clicked(this)">
+                                    Series
+
+                                    <div class="bottomxp">
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" onclick="clicked(this)">
+                                    Material
+
+                                    <div class="bottomxp">
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="btn_cl_cnt">
+                                <button class="gl_feature_btn" onclick="clicked(this)">
+                                    Q&A
+
+                                    <div class="bottomxp">
+
+                                    </div>
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="move" id="rightmove">
+                            <button  onclick="leftmove()"><i class="fas fa-angle-right"></i></button>
+                        </div>
+
+
+                        <!-- <div class="dummycontainer">
+
+                        </div> -->
+                    </div>
+                    <div class="dummycontainer">
+                        <div class="folders">
+                            <div class="folderhd">
+                                Folders
+                            </div>
+                            <div class="foldercont">
+                                <div class="folder">
+                                   <div class="box">
+                                            M
+                                   </div>
+                                   <div class="boxvals">
+                                        <div class="val">
+                                          m
+                                        </div>
+                                        <div class="val">
+                                            0 items
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="folder">
+                                    <div class="box blue">
+                                             B
+                                    </div>
+                                    <div class="boxvals">
+                                         <div class="val">
+                                           m
+                                         </div>
+                                         <div class="val">
+                                             0 items
+                                         </div>
+                                    </div>
+                                 </div>
+                                 <div class="folder">
+                                    <div class="box red">
+                                             M
+                                    </div>
+                                    <div class="boxvals">
+                                         <div class="val">
+                                           X
+                                         </div>
+                                         <div class="val">
+                                             0 items
+                                         </div>
+                                    </div>
+                                 </div>
+                                 <div class="folder">
+                                    <div class="box green">
+                                             O
+                                    </div>
+                                    <div class="boxvals">
+                                         <div class="val">
+                                           m
+                                         </div>
+                                         <div class="val">
+                                             0 items
+                                         </div>
+                                    </div>
+                                 </div>
+                                 <div class="folder">
+                                    <div class="box black">
+                                             P
+                                    </div>
+                                    <div class="boxvals">
+                                         <div class="val">
+                                           m
+                                         </div>
+                                         <div class="val">
+                                             0 items
+                                         </div>
+                                    </div>
+                                 </div>
+                            </div>
+
+                        </div>
+
+                        <div class="designs">
+                            <div class="desighead">
+                                Designs
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fixedToolGrid">
+        <div class="fixedoverflowcont">
+            <div class="fixedToolGrid_cont">
+                <button class="toolz">
+                    <div class="normalhover">
+
+                    </div>
+                    <div class="minusabs">
+                        <a>
+                            <i class="fas fa-minus"></i>
+                        </a>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/1.svg" alt="">
+                    </div>
+                    <div class="toolz_name">
+                        Pay
+                    </div>
+
+                </button>
+                <button class="toolz">
+                    <!-- <div class="normalhover">
+                        
+                    </div>
+                    <div class="minusabs">
+                        <a>
+                            <i class="fas fa-minus"></i>
+                        </a>
+                    </div> -->
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/2.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        learn
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="normalhover">
+                        
+                    </div>
+                    <div class="minusabs">
+                        <a>
+                            <i class="fas fa-minus"></i>
+                        </a>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/3.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        explore
+                    </div>
+                </button>
+                <button class="toolz">
+                    <!-- <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div> -->
+
+                    <div class="normalhover">
+                        
+                    </div>
+                    <div class="minusabs">
+                        <a>
+                            <i class="fas fa-minus"></i>
+                        </a>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/4.svg" alt="">
+                    </div>
+                    <div class="toolz_name">
+                        Pay
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/5.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        learn
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/6.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        explore
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/7.svg" alt="">
+                    </div>
+                    <div class="toolz_name">
+                        Pay
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/8.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        learn
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/9.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        explore
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/10.svg" alt="">
+                    </div>
+                    <div class="toolz_name">
+                        Pay
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/11.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        learn
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/12.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        explore
+                    </div>
+                </button>
+                <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/13.svg" alt="">
+                    </div>
+                    <div class="toolz_name">
+                        Pay
+                    </div>
+                </button>
+                <!-- <button class="toolz">
+                    <div class="overlayplusmin">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/14.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        learn
+                    </div>
+                </button> -->
+                <!-- <button class="toolz">
+                    <div class="toolz_icon_img">
+                        <img width="40" height="40" src="./gurucoolicon/Untitled design (8)/3.svg" alt="">
+
+                    </div>
+                    <div class="toolz_name">
+                        explore
+                    </div>
+                </button> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./dashboard.js"></script>
+    <script src="./buttonscrooll.js"></script>
+</body>
+
+</html>
